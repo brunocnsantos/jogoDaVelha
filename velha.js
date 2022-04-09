@@ -43,7 +43,17 @@ function checaVencedor() {
     var quadrado7 = document.getElementById(7);
     var quadrado8 = document.getElementById(8);
     var quadrado9 = document.getElementById(9);
-
+    let aux = 0;
+    for(i=1;i<=9;i++){
+        let empate = document.getElementById(i);
+        if(empate.innerHTML !== '-'){
+            aux++;}
+                      }
+    if(aux==9) {
+        vencedorSelecionado.innerHTML = 'empate';
+        return;
+               }
+    
     if(checaSequencia(quadrado1, quadrado2, quadrado3)) {
         mudaCorQuadrado(quadrado1, quadrado2, quadrado3);
         mudarVencedor(quadrado1);
